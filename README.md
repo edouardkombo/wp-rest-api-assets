@@ -32,7 +32,7 @@ This plugin requires having [WP API](https://wordpress.org/plugins/json-rest-api
 
 Install the plugin as you would with any WordPress plugin in your `wp-content/plugins/` directory or equivalent.
 
-Once installed, activate WP API Assets from WordPress plugins dashboard page and you're ready to go, WP API will respond to new routes and endpoints to your registered assets.
+Once installed, activate WP API Assets from WordPress plugins dashboard page, go to the plugin page and you're ready to go, WP API will respond to new routes and endpoints to your registered assets.
 
 
 == Frequently Asked Questions ==

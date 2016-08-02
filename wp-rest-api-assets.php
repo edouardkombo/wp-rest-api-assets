@@ -42,6 +42,8 @@ if ( ! function_exists ( 'wp_rest_api_assets_init' ) ) :
 
     /**
      * Get assets in json format by searching inside files
+     *
+     * If custom file is there, it should be requested by default, otherwise priority is to original json file
      */
     function wraa_get_assets() {
 
@@ -49,14 +51,14 @@ if ( ! function_exists ( 'wp_rest_api_assets_init' ) ) :
         $customFile = __DIR__ . '/custom.json';
 
         if (file_exists($originalFile)) {
-            $original = (string) file_get_contents($originalFile);
-            $custom = (string) file_get_contents($customFile);
-
-            $result = (!is_null($custom) && !empty($custom)) ? $custom : $original;
-
-            return  json_decode($result);
-
+            $result = (string)file_get_contents($originalFile);
         }
+
+        if (file_exists($customFile)) {
+            $result = (string) file_get_contents($customFile);
+        }
+
+        return  (empty($result)) ? NULL : json_decode($result);
     }
 
 	/**
