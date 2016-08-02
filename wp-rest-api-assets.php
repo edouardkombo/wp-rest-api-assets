@@ -75,9 +75,6 @@ if ( ! function_exists ( 'wp_rest_api_assets_init' ) ) :
 			     $class = new WP_REST_Api_Assets();
 	             $class->scriptsAndStyles = $all_the_scripts_and_styles;
 			     add_filter( 'rest_api_init', array( $class, 'register_routes' ) );
-        } else {
-            $class = new WP_JSON_Menus();
-            add_filter( 'json_endpoints', array( $class, 'register_routes' ) );
         }
     }
 

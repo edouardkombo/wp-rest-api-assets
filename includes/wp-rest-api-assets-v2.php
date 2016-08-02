@@ -133,7 +133,7 @@ if ( ! class_exists( 'WP_REST_Api_Assets' ) ) :
          */
         public function get_assets() {
 
-            return apply_filters( 'rest_menus_format_menus', $this->scriptsAndStyles );
+            return apply_filters( 'rest_prepare_', $this->scriptsAndStyles );
         }
 
         /**
@@ -144,7 +144,7 @@ if ( ! class_exists( 'WP_REST_Api_Assets' ) ) :
          */
         public function get_permanent_assets() {
 
-            return apply_filters( 'rest_menus_format_menus', $this->scriptsAndStyles->permanent );
+            return apply_filters( 'rest_prepare_', $this->scriptsAndStyles->permanent );
         }
 
         /**
@@ -158,7 +158,7 @@ if ( ! class_exists( 'WP_REST_Api_Assets' ) ) :
             $params     = $request->get_params();
             $type       = $params['type'];
 
-            return apply_filters( 'rest_menus_format_menus', $this->scriptsAndStyles->permanent->{$type} );
+            return apply_filters( 'rest_prepare_', $this->scriptsAndStyles->permanent->{$type} );
         }
 
         /**
@@ -169,7 +169,7 @@ if ( ! class_exists( 'WP_REST_Api_Assets' ) ) :
          */
         public function get_optional_assets() {
 
-            return apply_filters( 'rest_menus_format_menus', $this->scriptsAndStyles->optional );
+            return apply_filters( 'rest_prepare_', $this->scriptsAndStyles->optional );
         }
 
         /**
@@ -183,7 +183,7 @@ if ( ! class_exists( 'WP_REST_Api_Assets' ) ) :
             $params     = $request->get_params();
             $url       = $params['url'];
 
-            return apply_filters( 'rest_menus_format_menus', $this->scriptsAndStyles->optional->{$url} );
+            return apply_filters( 'rest_prepare_', $this->scriptsAndStyles->optional->{$url} );
         }
 
         /**
@@ -198,7 +198,7 @@ if ( ! class_exists( 'WP_REST_Api_Assets' ) ) :
             $url       = $params['url'];
             $type       = $params['type'];
 
-            return apply_filters( 'rest_menus_format_menus', $this->scriptsAndStyles->optional->{$url}->{$type} );
+            return apply_filters( 'rest_prepare_', $this->scriptsAndStyles->optional->{$url}->{$type} );
         }
     }
 
