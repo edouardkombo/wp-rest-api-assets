@@ -210,7 +210,8 @@ function wraa_launch_admin(){
             <div class=\"postbox\">
                 <p class=\"alert-box warning\">
                     You need Wp Rest APi v2 in order to use this plugin. If you don't have this plugin installed, please install it now <a target=\"_blank\" href=\"http://v2.wp-api.org/\">http://v2.wp-api.org/</a>.<br>
-                    This plugin directory must have '0775' rights. Make sure to make it writable.
+                    This plugin directory must have '0775' rights. Make sure to make it writable.<br/>
+                    Also be sure that your directory has correct group permission for current linux user.
                 </p><br>
                 <h3>What is it for?</h3>
                 <p>Request through JSON, all assets (styles and scripts) needed by active plugins and main theme.</p>
