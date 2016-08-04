@@ -1,8 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', true);
-
 add_action('admin_menu', 'wraa_wp_rest_api_assets_setup_menu');
 
 function wraa_wp_rest_api_assets_setup_menu(){
